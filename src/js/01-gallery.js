@@ -9,12 +9,12 @@ console.log(galleryItems);
 
 
 const listEl = document.querySelector(".gallery");
-console.log(listEl);
+
 const arrayImg = galleryItems
   .map(({ preview, original, description }) => {
     return `
     <a class="gallery__item" href="${original}">
-  <img class="gallery__image" src="${preview}" alt="${description}"/>
+  <img class="gallery__image" src="${preview}" alt="${description}" title="${description}"/>
 </a>`;
   })
   .join("");
@@ -22,6 +22,5 @@ const arrayImg = galleryItems
 listEl.insertAdjacentHTML("afterbegin", arrayImg);
 
 let gallery = new SimpleLightbox(".gallery a", {
-  captionData: 'alt',
-  captionDelay: 250,
+    captionDelay: 250,
 });
