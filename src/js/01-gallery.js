@@ -21,6 +21,7 @@ const arrayImg = galleryItems
 
 listEl.insertAdjacentHTML("afterbegin", arrayImg);
 
-let gallery = new SimpleLightbox(".gallery a", {
+const gallery = new SimpleLightbox(".gallery a", {
     captionDelay: 250,
 });
+ 
